@@ -23,7 +23,7 @@ public class LogController {
 
     @CrossOrigin(origins = "*")
     @PostMapping(path = "/employeeLog",consumes = "application/json",produces = "application/json")
-    public Map<String,String> EmployLog(@RequestBody EmployeeLog emp)
+    public HashMap<String,String> EmployLog(@RequestBody EmployeeLog emp)
     {
 
         daoE.save(emp);
