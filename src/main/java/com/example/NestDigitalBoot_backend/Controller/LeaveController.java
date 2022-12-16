@@ -45,17 +45,18 @@ public class LeaveController {
         return (List<Leave>) ldao.findAll();
     }
 
-    @CrossOrigin(origins = "*")
-    @GetMapping("/lApplyView")
-    public List<Map<String, String>> LeaveApplyView() {
-        return (List<Map<String, String>>) ldao.LeaveApplyView();
+//    @CrossOrigin(origins = "*")
+//    @GetMapping("/lApplyView")
+//    public List<Map<String, String>> LeaveApplyView() {
+//        return (List<Map<String, String>>) ldao.LeaveApplyView();
+//
+//    }
 
-    }
+//    @CrossOrigin(origins = "*")
+//    @PostMapping(path = "/lViewId",consumes = "application/json",produces = "application/json")
+//    public  List<Map<String,String>> viewLeavesById(@RequestBody Leave l){
+//        return (List<Map<String, String>>) ldao.viewLeaveById(l.getEmpId());
+//    }
 
-    @CrossOrigin(origins = "*")
-    @PostMapping(path = "/lViewId",consumes = "application/json",produces = "application/json")
-    public  List<Map<String,String>> viewLeavesById(@RequestBody Leave l){
-        return (List<Map<String, String>>) ldao.viewLeaveById(l.getEmpId());
-    }
 
 }
